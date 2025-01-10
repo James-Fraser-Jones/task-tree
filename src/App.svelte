@@ -1,15 +1,14 @@
 <script lang="ts">
-  let name = "World";
+  import Node from "./lib/Node.svelte";
+  import tree from './assets/tree.svg';
 </script>
 
-<div class="text-center bg-blue-500 text-white p-4 rounded-lg">
-  <h1 class="text-2xl">Hello, {name}!</h1>
+<div class="flex flex-col w-full h-screen p-5 gap-10">
+  <div class="w-full flex justify-center gap-5 items-center">
+    <h1 class="text-4xl">TaskTree</h1>
+    <img src={tree} alt="Tree" class="w-20" />
+  </div>
+  <div class="grow">
+    <Node/>
+  </div>
 </div>
-
-<label>
-  Material 3
-  <md-checkbox checked></md-checkbox>
-</label>
-
-<md-outlined-button>Back</md-outlined-button>
-<md-filled-button>Next</md-filled-button>
